@@ -1,0 +1,28 @@
+### 获取Todo列表
+GET http://localhost:7777/todos HTTP/1.1
+
+### 获取Todo详情
+
+GET http://localhost:7777/todos/f705a1ee-8ed5-4843-9c4a-226b10981286
+
+### 新增Todo
+
+POST http://localhost:7777/todos HTTP/1.1
+content-type: application/json
+
+{
+    "userId": 666,
+    "title": "Learn Deno"
+}
+
+### 更新Todo
+PUT http://localhost:7777/todos/f705a1ee-8ed5-4843-9c4a-226b10981286 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Learn Deno",
+    "completed": true  
+}
+
+### 删除Todo
+DELETE  http://localhost:7777/todos/f705a1ee-8ed5-4843-9c4a-226b10981286 HTTP/1.1
